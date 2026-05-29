@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Limitless Kreationz | Sovereign Codex Console</title>
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Limitless Kreationz Sovereign Codex Console — Neon-dark DevSecOps workspace, vault-aware and ledger-aligned." />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/theme.css" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;600;900&display=swap');
+    </style>
+</head>
+<body class="min-h-screen flex bg-black text-white selection:bg-[#FF1493] selection:text-black">
+    <div class="scanlines"></div>
+
+    <div id="app" class="w-full min-h-screen flex flex-row relative overflow-hidden">
+        <!-- Sidebar -->
+        <aside id="sidebar" class="w-20 lg:w-72 bg-[#050505] border-r border-[#FF1493]/30 flex flex-col items-center py-8">
+            <div class="p-6 border-b border-white/5 w-full text-center">
+                <i class="fa-solid fa-infinity text-[#FF1493] text-3xl"></i>
+                <p class="mt-3 text-[10px] tracking-[0.25em] uppercase text-white/40">
+                    Limitless Kreationz
+                </p>
+            </div>
+
+            <nav class="flex-1 px-3 py-6 space-y-3 w-full text-xs">
+                <button class="nav-pill active" data-panel="codex">
+                    <i class="fa-solid fa-terminal mr-2"></i> Codex Console
+                </button>
+                <button class="nav-pill" data-panel="ledger">
+                    <i class="fa-solid fa-database mr-2"></i> Sovereign Ledger
+                </button>
+                <button class="nav-pill" data-panel="vault">
+                    <i class="fa-solid fa-vault mr-2"></i> Asset Vault
+                </button>
+                <button class="nav-pill" data-panel="harvester">
+                    <i class="fa-solid fa-cloud-arrow-down mr-2"></i> Harvester
+                </button>
+            </nav>
+
+            <div class="px-4 py-4 border-t border-white/5 w-full text-[10px] text-white/40 space-y-1">
+                <p class="uppercase tracking-[0.25em] text-[9px]">Sovereign System</p>
+                <p>© Limitless Kreationz | SFT 2026<br />All Rights Reserved</p>
+            </div>
+        </aside>
+
+        <!-- Main -->
+        <main class="flex-1 p-6 md:p-10 lg:p-12 bg-black">
+            <header class="mb-10">
+                <h1 class="text-3xl md:text-5xl font-black italic uppercase tracking-tighter">
+                    MASTER <span class="text-[#FF1493]">CODEX</span> CONSOLE
+                </h1>
+                <p class="mt-3 text-xs md:text-sm text-white/50 max-w-xl">
+                    Neon-dark sovereign workspace for harvesting, hashing, encrypting, and indexing your AI-generated work
+                    into a biometric-gated vault and sovereign ledger.
+                </p>
+            </header>
+
+            <!-- Panels -->
+            <section id="panel-codex" class="panel active fade-in">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="card">
+                        <h3 class="card-label">System Active</h3>
+                        <p class="card-body">
+                            The sovereign environment is initialized. Use the sidebar to navigate Codex, Ledger, Vault, and Harvester tiers.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-label">Compiler Status</h3>
+                        <p class="card-body text-xs">
+                            The frontend console is ready to receive harvested sessions. Backend compiler, vault, and ledger logic
+                            are defined in <code>assets/js/compiler.js</code>, <code>vault.js</code>, and <code>ledger.js</code>.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="panel-ledger" class="panel hidden fade-in">
+                <div class="card mb-4">
+                    <h3 class="card-label">Sovereign Ledger</h3>
+                    <p class="card-body text-xs">
+                        This panel will render indexed sessions from your local Sovereign Vault. Each entry includes:
+                        <span class="text-[#FF1493]">SESSION-ID</span>, origin, timestamps, and SHA-256 integrity status.
+                    </p>
+                </div>
+                <div id="ledger-list" class="space-y-2 text-xs text-white/70">
+                    <!-- Populated by assets/js/ledger.js -->
+                </div>
+            </section>
+
+            <section id="panel-vault" class="panel hidden fade-in">
+                <div class="card mb-4">
+                    <h3 class="card-label">Vault Overview</h3>
+                    <p class="card-body text-xs">
+                        The real encrypted vault lives on-device in your iOS app, gated by biometrics. This console documents
+                        the architecture and can simulate non-sensitive flows.
+                    </p>
+                </div>
+                <p class="text-xs text-white/50">
+                    See <code>docs/vault-encryption-spec.md</code> and <code>docs/biometric-auth-spec.md</code> for full details.
+                </p>
+            </section>
+
+            <section id="panel-harvester" class="panel hidden fade-in">
+                <div class="card mb-4">
+                    <h3 class="card-label">Harvester Mode</h3>
+                    <p class="card-body text-xs">
+                        Use Mirror Mode prompts in Gemini, Copilot, Claude, Grok, etc., then paste harvested sessions into your
+                        Sovereign Compiler. This panel documents the workflow and can later host a paste/import UI.
+                    </p>
+                </div>
+                <p class="text-xs text-white/50">
+                    See <code>docs/harvester-workflow.md</code> for the full account-by-account harvesting pattern.
+                </p>
+            </section>
+
+            <footer class="mt-12 pt-6 border-t border-white/10 text-[10px] text-white/40 flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+                <div>
+                    © Limitless Kreationz | SFT 2026 — All Rights Reserved<br />
+                    Sovereign Systems Architecture Foundry · Neon-Dark Edition
+                </div>
+                <div class="text-[9px] uppercase tracking-[0.25em]">
+                    Ghost Mode: Conceptual · Vault: Local-Only · Identity: Sovereign
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/compiler.js"></script>
+    <script src="assets/js/vault.js"></script>
+    <script src="assets/js/ledger.js"></script>
+    <script src="assets/js/harvester.js"></script>
+</body>
+</html>
