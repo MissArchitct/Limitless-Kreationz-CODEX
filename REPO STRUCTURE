@@ -1,0 +1,28 @@
+Limitless-Kreationz-Codex/
+│
+├── index.html
+├── assets/
+│   ├── css/
+│   │   ├── global.css
+│   │   └── theme.css
+│   ├── js/
+│   │   ├── app.js
+│   │   ├── compiler.js
+│   │   ├── vault.js
+│   │   ├── ledger.js
+│   │   └── harvester.js
+│   ├── fonts/
+│   └── images/
+│
+├── vault/
+│   └── README.md
+│
+├── docs/
+│   ├── architecture.md
+│   ├── sovereign-ledger-spec.md
+│   ├── vault-encryption-spec.md
+│   ├── biometric-auth-spec.md
+│   └── harvester-workflow.md
+│
+├── LICENSE
+└── README.md
