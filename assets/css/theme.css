@@ -1,0 +1,19 @@
+.nav-pill {
+    @apply w-full flex items-center justify-start px-3 py-2 rounded-md text-[11px] uppercase tracking-[0.2em] bg-transparent text-white/50 border border-transparent hover:border-[#FF1493]/40 hover:text-[#FF1493] transition;
+}
+
+.nav-pill.active {
+    @apply bg-[#FF1493]/15 border-[#FF1493]/60 text-[#FF1493];
+}
+
+.card {
+    @apply p-5 border border-white/10 rounded-lg bg-black/60 backdrop-blur-sm;
+}
+
+.card-label {
+    @apply text-[#FF1493] font-black uppercase tracking-[0.3em] text-[10px] mb-2;
+}
+
+.card-body {
+    @apply text-white/60 text-xs leading-relaxed;
+}
